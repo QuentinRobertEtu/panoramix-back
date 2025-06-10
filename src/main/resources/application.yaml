@@ -2,9 +2,9 @@ spring:
   application:
     name: panoramix.com
   datasource:
-    url: ${{PG_URL}}
-    username: ${{PG_USER}}
-    password: ${{PG_PASS}}
+    url: ${PG_URL}
+    username: ${PG_USER}
+    password: ${PG_PASS}
   jpa:
     show-sql: false
     hibernate:
@@ -19,8 +19,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: ${{GMAIL_ADDRESS}}
-    password: ${{GMAIL_PASS}}
+    username: ${GMAIL_ADDRESS}
+    password: ${GMAIL_PASS}
     properties:
       mail:
         smtp:
