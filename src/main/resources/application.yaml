@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: panoramix.com
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: panoramix.irreductible@gmail.com
+    password: ton-mot-de-passe-d-application
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  
+server:
+  port: 3001
+  servlet:
+    context-path: /api
