@@ -1,7 +1,9 @@
 package panoramix.com.backend.mail;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,8 +12,11 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="mail_register")
 public class MailRegister {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    Long druidId;
     
     String druidName;
 
