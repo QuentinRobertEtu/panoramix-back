@@ -2,24 +2,24 @@ spring:
   application:
     name: panoramix.com
   datasource:
-    url: jdbc:h2:file:/app/data/mydb
-    driver-class-name: org.h2.Driver
-    username: sa
-    password:
+    url: jdbc:${{PG_URL}}
+    username: ${{PG_USER}}
+    password: ${{PG_PASS}}
   jpa:
+    show-sql: false
     hibernate:
-      ddl-auto: update  # ou 'create-drop' en dev, mais pas en prod
-    show-sql: true
-    database-plateform: org.hibernate.dialect.H2Dialect
-  h2:
-    console:
-      enabled: true
-      path: /h2-console
+      ddl-auto: update
+
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    database: postgresql
 
   mail:
     host: smtp.gmail.com
     port: 587
-    username: panoramix.irreductible@gmail.com
+    username: ${{GMAIL_ADDRESS}}
     password: ${{GMAIL_PASS}}
     properties:
       mail:
