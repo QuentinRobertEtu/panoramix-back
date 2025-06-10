@@ -10,6 +10,7 @@ spring:
     hibernate:
       ddl-auto: update  # ou 'create-drop' en dev, mais pas en prod
     show-sql: true
+    database-plateform: org.hibernate.dialect.H2Dialect
   h2:
     console:
       enabled: true
