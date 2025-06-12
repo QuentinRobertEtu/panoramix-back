@@ -2,7 +2,7 @@ spring:
   application:
     name: panoramix.com
   datasource:
-    url: jdbc:postgresql://tramway.proxy.rlwy.net:47385/railway
+    url: ${DB_URL}
     username: ${PGUSER}
     password: ${PGPASSWORD}
   jpa:
