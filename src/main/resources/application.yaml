@@ -2,9 +2,9 @@ spring:
   application:
     name: panoramix.com
   datasource:
-    url: ${PG_URL}
-    username: ${PG_USER}
-    password: ${PG_PASS}
+    url: ${DATABASE_URL}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
   jpa:
     show-sql: false
     hibernate:
