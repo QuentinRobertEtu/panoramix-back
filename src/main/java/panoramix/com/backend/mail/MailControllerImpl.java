@@ -17,8 +17,7 @@ public class MailControllerImpl implements MailController {
     @Override
     public ResponseEntity<String> sendMail(MailRequestForm mailRequestForm, HttpServletRequest request) {
         String origin = request.getHeader("Origin");
-        System.out.println(origin);
-        if (origin == null || !origin.equals("https://panoramix.up.railway.app/")) {
+        if (origin == null || !origin.equals("https://panoramix.up.railway.app")) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Eh non");
         } else {
             return ResponseEntity.status(HttpStatus.OK).body(mailService.sendEmail(mailRequestForm));
